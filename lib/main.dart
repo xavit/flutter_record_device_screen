@@ -51,8 +51,8 @@ class _HomePageState extends State<HomePage> {
       {required String fileName,
       required int width,
       required int height}) async {
-    Directory? tempDir = await getApplicationDocumentsDirectory();
-    String? tempPath = tempDir.path;
+    Directory? tempDir = await getDownloadsDirectory();
+    String? tempPath = tempDir!.path;
     try {
       var startResponse = await screenRecorder?.startRecordScreen(
         fileName: "Eren",
